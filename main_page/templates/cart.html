@@ -1,0 +1,24 @@
+
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+    <button><a href="/"> Back  </a></button>
+</form>
+{% for cart in user_cart%}
+
+Товар:{{ cart.user_product.product_name }}<br><hr>
+Количество:{{ cart.user_product_quantity }}<br><hr>
+Цена:{{ cart.user_product.product_price }}<br><hr>
+
+<form action="/delete_product/{{ cart.user_product.id }}">
+    <button>Удалить продукт</button>
+</form>
+
+{% endfor %}
+
+<form action="/checkout" method="post">
+{% csrf_token %}
+    {{ form.as_p }}
+<button> Оформить заказ</button>
+
+</form>

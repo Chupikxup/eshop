@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{{ current_category }}
+{% for category in current_category %}
+<button type="button" style=""><a href="category/{{category.id}}">{{ current_category }}</a></button>
+<br>
+
+{% endfor %}
+
+{{ category_products }}
+{% for product in category_products %}
+<button type="button" style=""><a href="category/{{category.id}}">{{ category_products }}</a></button>
+<br>
+
+{% endfor %}
+
+</body>
+</html>

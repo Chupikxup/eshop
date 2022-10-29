@@ -1,0 +1,27 @@
+
+
+<body ><img src="https://avatars.mds.yandex.net/i?id=e321dcd4823f6c9cfc7f0c9105f4fe48-5291751-images-thumbs&n=13">
+<table>
+<tr>
+<td bgcolor="red">
+    <button type="button" class="one"><a href="/products"> Producti</a></button><hr></td></tr>
+{% if user.is_authenticated %}
+    <tr>
+        <td bgcolor="blue">
+            <button type="button"><a href="/accounts/login">Logout</a> </button><br><hr></td></tr>
+{% endif %}
+    <tr>
+        <td bgcolor="green">
+            <button type="button"><a href="/accounts/login">Login </a> </button><br><hr></td></tr>
+            <button><a href="/user_cart">Cart </a> </button><br>
+<tr>
+    <td bgcolor="cyan">
+<form action="/search" method="post">
+    <!-- Поиск -->
+    {% csrf_token %}
+    <input type="text" name="search_product">
+    <button>Поиск</button>
+</form>
+    </td></tr>
+</table>
+</body>

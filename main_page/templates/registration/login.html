@@ -1,0 +1,23 @@
+<style>
+
+
+</style>
+
+
+<table  border="3">
+<form method="post">
+<tr bgcolor="purple">
+<th colspan="2">
+{% csrf_token %}
+{{ form.as_p }}
+    <button>submit</button>
+</form>
+    </th>
+    </tr>
+    <tr bgcolor="orange" >
+
+       <td>
+         <h3>Hello if u completed this form please press the button</h3>
+    </td>
+    </tr>
+</table>
